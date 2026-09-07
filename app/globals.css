@@ -22,9 +22,14 @@
   --color-line: var(--line);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: var(--cream);
   color: var(--ink);
+  overflow-x: hidden;
 }
 
 /* Arabic text - loaded via <link> in layout head, not next/font,
