@@ -24,6 +24,19 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap"
           rel="stylesheet"
         />
+
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PJDW79FNT"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-1PJDW79FNT');
+            `,
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col bg-cream text-ink">
         <Header />
