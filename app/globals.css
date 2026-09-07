@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #faf7f0;
+  --cream-soft: #f2ecdd;
+  --ink: #1e2b23;
+  --ink-soft: #5c6b5f;
+  --palm: #2f5d43;
+  --palm-dark: #1f3f2d;
+  --gold: #b8860b;
+  --line: #e2d9c3;
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-cream-soft: var(--cream-soft);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-palm: var(--palm);
+  --color-palm-dark: var(--palm-dark);
+  --color-gold: var(--gold);
+  --color-line: var(--line);
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+/* Arabic text - loaded via <link> in layout head, not next/font,
+   so build never depends on fetching fonts at build time */
+.font-arabic {
+  font-family: "Amiri Quran", "Scheherazade New", "Traditional Arabic", serif;
+  direction: rtl;
+}
+
+.font-urdu {
+  font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif;
+  direction: rtl;
+}
+
+.font-headline {
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+}
+
+/* Decorative corner ornament for surah headers */
+.ornament::before,
+.ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+}
